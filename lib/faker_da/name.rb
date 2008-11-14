@@ -1,7 +1,7 @@
 module Faker
   class Name
     class << self
-      def name
+      def da_name
         DaFormats.rand.call.join(' ')
       end
     
@@ -31,16 +31,16 @@ module Faker
     end
     
     DaFormats = [
-      Proc.new { [ da_prefix, first_name_f, last_name ] },
-      Proc.new { [ da_prefix, first_name_m, last_name ] },
-      Proc.new { [ first_name_f, last_name ] },
-      Proc.new { [ first_name_f, last_name ] },
-      Proc.new { [ first_name_f, last_name ] },
-      Proc.new { [ first_name_f, last_name ] },
-      Proc.new { [ first_name_m, last_name ] },
-      Proc.new { [ first_name_m, last_name ] },
-      Proc.new { [ first_name_m, last_name ] },
-      Proc.new { [ first_name_m, last_name ] }
+      Proc.new { [ da_prefix, da_first_name_f, da_last_name ] },
+      Proc.new { [ da_prefix, da_first_name_m, da_last_name ] },
+      Proc.new { [ da_first_name_f, da_last_name ] },
+      Proc.new { [ da_first_name_f, da_last_name ] },
+      Proc.new { [ da_first_name_f, da_last_name ] },
+      Proc.new { [ da_first_name_f, da_last_name ] },
+      Proc.new { [ da_first_name_m, da_last_name ] },
+      Proc.new { [ da_first_name_m, da_last_name ] },
+      Proc.new { [ da_first_name_m, da_last_name ] },
+      Proc.new { [ da_first_name_m, da_last_name ] }
       ]
   end
 end
