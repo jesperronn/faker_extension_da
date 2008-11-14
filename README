@@ -3,8 +3,10 @@ FakerExtensionDa
 
 Danish names and formats built on top of the Faker gem. 
 Currently with 
- * common Danish first and last names
- * Social security numbers
+ * Common Danish first and last names
+ * Danish Social security numbers (called CPR-nummer)
+ * Danish zipcodes and city names 
+ * Danish phone numbers
 
 Installation
 ============
@@ -16,8 +18,13 @@ Example
 =======
 
 User.populate 100 do |person|
-  person.navn    = Faker::Name.da_name  
-  person.cpr     = Faker::Ssn.da_ssn
+  person.navn      = Faker::Name.da_name  
+  person.cpr       = Faker::Ssn.da_ssn
+  person.homephone = Faker::PhoneNumber.da_phone_number
+  person.cellphone = Faker::PhoneNumber.da_cellphone_number    
+  zipandcity       = Faker::Address.da_zip_and_city
+  person.zipcode   = zipandcity[0]
+  person.city      = zipandcity[1]
 end
 
              
@@ -25,8 +32,6 @@ TODO
 ====
 Feel free to add further support for 
  * Danish addresses
- * Danish phone numbers
- * Danish cellphone numbers 
 
 Copyright (c) 2008 [Jesper Rønn-Jensen], released under the MIT license
 
