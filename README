@@ -1,0 +1,33 @@
+FakerExtensionDa
+================
+
+Danish names and formats built on top of the Faker gem. 
+Currently with 
+ * common Danish first and last names
+ * Social security numbers
+
+Installation
+============
+sudo gem install faker
+./script/plugin install
+
+
+Example
+=======
+
+User.populate 100 do |person|
+  person.navn    = Faker::Name.da_name  
+  person.cpr     = Faker::Ssn.da_cpr
+end
+
+             
+TODO
+====
+Feel free to add further support for 
+ * Danish addresses
+ * Danish phone numbers
+ * Danish cellphone numbers 
+
+Copyright (c) 2008 [Jesper Rønn-Jensen], released under the MIT license
+
+
