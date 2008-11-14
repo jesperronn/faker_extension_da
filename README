@@ -17,7 +17,7 @@ Example
 
 User.populate 100 do |person|
   person.navn    = Faker::Name.da_name  
-  person.cpr     = Faker::Ssn.da_cpr
+  person.cpr     = Faker::Ssn.da_ssn
 end
 
              
